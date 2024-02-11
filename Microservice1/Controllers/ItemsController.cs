@@ -12,8 +12,8 @@ namespace Microservice1.Controllers
     [Route("Items")]
     public class ItemsController : ControllerBase
     {
-        private readonly IItemRepository _itemsRepository;
-        public ItemsController(IItemRepository itemsRepository)
+        private readonly IRepository<Item> _itemsRepository;
+        public ItemsController(IRepository<Item> itemsRepository)
         {
             _itemsRepository = itemsRepository;
         }

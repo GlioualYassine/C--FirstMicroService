@@ -1,3 +1,4 @@
+using Microservice1.Entities;
 using Microservice1.Repositories;
 using Microservice1.Settings;
 using Microsoft.AspNetCore.Builder;
@@ -43,7 +44,11 @@ namespace Microservice1
                 return mongoClient.GetDatabase(serviceSettings.ServiceName);
             });
 
-            services.AddSingleton<IItemRepository, ItemsRepository>();
+            services.AddSingleton<IRepository<Item>>(serviceProvider =>
+            {
+                var database = serviceProvider.GetService<IMongoDatabase>();
+                return new MongoRepository<Item>(database, "items");
+            });
 
 
             services.AddControllers(options =>

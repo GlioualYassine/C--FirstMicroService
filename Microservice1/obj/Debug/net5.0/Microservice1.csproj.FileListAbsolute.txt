@@ -44,3 +44,4 @@ C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\ZstdSha
 C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1.sourcelink.json
