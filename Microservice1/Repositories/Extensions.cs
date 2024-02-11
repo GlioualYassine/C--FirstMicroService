@@ -11,7 +11,7 @@ namespace Microservice1.Repositories
 {
     public static class Extensions
     {
-        public static IServiceCollection AddMongo(this IServiceCollection services)
+        public static IServiceCollection AddMongo(this IServiceCollection services) // this IServiceCollection services mean that we are going to extend this interface
         {
             BsonSerializer.RegisterSerializer(new GuidSerializer(MongoDB.Bson.BsonType.String));
             BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(MongoDB.Bson.BsonType.String));
