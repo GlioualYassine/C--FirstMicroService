@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TrNRsGgrCHaytlG3THkErkv/nfhnph2FNl/Wo/GGqUqAB6IU5Jg4Fy0F5upgcX3oniacqUYM5g9G2R1XPM9N+A==",
+  "dgSpecHash": "KUS+4HVBm/PhkdOwo6wsurWjPquKnR3jsmU/Rd+dLfoX0Q0ie14t5cx8+CEEo5nCgDparDiHs4NdZU8+LeKKgg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice1\\Microservice1 items.csproj",
+  "projectFilePath": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice1\\Microservice1 Catalog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yassi\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

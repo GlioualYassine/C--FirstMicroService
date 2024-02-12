@@ -21,7 +21,7 @@ namespace Microservice_2_Inventory.Controllers
             this._ItemRepository = repository;
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<InventoryItemDto>>> GetAync(Guid userId)
         {
             if (userId == Guid.Empty)
@@ -34,12 +34,12 @@ namespace Microservice_2_Inventory.Controllers
         public async Task<ActionResult> PostAsync(GrantItemDtos grantItemDtos)
         {
             var InventoryItem = await _ItemRepository.GetAsync(
-                item => item.UserId == grantItemDtos.userId && item.CatalogItemId == grantItemDtos.CatalogueItemId);
+                item => item.UserId == grantItemDtos.userId && item.CatalogItemId == grantItemDtos.CatalogItemId);
             if(InventoryItem == null)
             {
                 InventoryItem = new InventoryItem
                 {
-                    CatalogItemId = grantItemDtos.CatalogueItemId,
+                    CatalogItemId = grantItemDtos.CatalogItemId,
                     UserId = grantItemDtos.userId,
                     Quantity = grantItemDtos.Quantity, 
                     AcquiredDate = DateTimeOffset.UtcNow

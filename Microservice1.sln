@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice1 items", "Microservice1\Microservice1 items.csproj", "{E0B64661-FE4D-4799-B89C-42707237C9E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice1 Catalog", "Microservice1\Microservice1 Catalog.csproj", "{E0B64661-FE4D-4799-B89C-42707237C9E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{6C6030D2-90CC-44B8-8A4C-7961A4F86E33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{6C6030D2-90CC-44B8-8A4C-7961A4F86E33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice 2 Inventory", "Microservice 2 Inventory\Microservice 2 Inventory.csproj", "{0F063ACD-DE54-4D8B-8826-C23BA4E172B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice 2 Inventory", "Microservice 2 Inventory\Microservice 2 Inventory.csproj", "{0F063ACD-DE54-4D8B-8826-C23BA4E172B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
