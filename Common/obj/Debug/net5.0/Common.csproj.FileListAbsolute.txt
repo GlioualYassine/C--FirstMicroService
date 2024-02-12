@@ -1,0 +1,13 @@
+C:\Users\yassi\source\repos\Microservice1\Common\bin\Debug\net5.0\Common.deps.json
+C:\Users\yassi\source\repos\Microservice1\Common\bin\Debug\net5.0\Common.dll
+C:\Users\yassi\source\repos\Microservice1\Common\bin\Debug\net5.0\Common.pdb
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\Common.csproj.AssemblyReference.cache
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\Common.AssemblyInfoInputs.cache
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\Common.AssemblyInfo.cs
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\Common.csproj.CoreCompileInputs.cache
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\Common.sourcelink.json
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\Common.dll
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\refint\Common.dll
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\Common.pdb
+C:\Users\yassi\source\repos\Microservice1\Common\obj\Debug\net5.0\ref\Common.dll

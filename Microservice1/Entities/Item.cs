@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Common.Entities;
 namespace Microservice1.Entities
 {
     public class Item : IEntity

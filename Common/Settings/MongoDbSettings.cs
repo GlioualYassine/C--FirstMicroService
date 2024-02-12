@@ -1,4 +1,4 @@
-﻿namespace Microservice1.Settings
+﻿namespace Common.Settings
 {
     public class MongoDbSettings
     {

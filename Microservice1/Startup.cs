@@ -1,6 +1,6 @@
+using Common.Repositories;
+using Common.Settings;
 using Microservice1.Entities;
-using Microservice1.Repositories;
-using Microservice1.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

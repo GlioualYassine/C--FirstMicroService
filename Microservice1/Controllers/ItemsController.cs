@@ -1,5 +1,5 @@
-﻿using Microservice1.Entities;
-using Microservice1.Repositories;
+﻿using Common.Repositories;
+using Microservice1.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microservice1.Entities
+namespace Common.Entities
 {
     public interface IEntity
     {

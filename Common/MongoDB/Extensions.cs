@@ -1,13 +1,13 @@
-﻿using Microservice1.Settings;
+﻿using Common.Settings;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson.Serialization.Serializers;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using System.Runtime.CompilerServices;
-using Microservice1.Entities;
+using Common.Entities;
 
-namespace Microservice1.Repositories
+namespace Common.Repositories
 {
     public static class Extensions
     {

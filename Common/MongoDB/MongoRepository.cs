@@ -1,10 +1,11 @@
-﻿using Microservice1.Entities;
+﻿using Common.Entities;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microservice1.Repositories; 
-namespace Microservice1.Repositories
+using Common.Repositories;
+using System.Linq.Expressions;
+namespace Common.Repositories
 {
     public class MongoRepository<T>: IRepository<T> where T : IEntity
     {
@@ -20,10 +21,21 @@ namespace Microservice1.Repositories
         {
             return await dbCollection.Find(filterBuilder.Empty).ToListAsync();
         }
-        public Task<T>GetAsync(Guid id)
+        public async Task<IReadOnlyCollection<T>> GetAllAsync(Expression<Func<T, bool>> filter)
+        {
+            return await dbCollection.Find(filter).ToListAsync();
+        }
+
+        public async Task<T>GetAsync(Guid id)
         {
             FilterDefinition<T> filter = filterBuilder.Eq(entity=>entity.Id,id);
-            return dbCollection.Find(filter).FirstOrDefaultAsync();
+            return await dbCollection.Find(filter).FirstOrDefaultAsync();
+        }
+
+        public async Task<T> GetAsync(Expression<Func<T, bool>> filter)
+        {
+            return await dbCollection.Find(filter).FirstOrDefaultAsync();
+
         }
 
         public async Task CreateAsync(T item)
@@ -42,5 +54,7 @@ namespace Microservice1.Repositories
             FilterDefinition<T> filter = filterBuilder.Eq(item => item.Id, id);
             await dbCollection.DeleteOneAsync(filter);
         }
+
+        
     }
 }
