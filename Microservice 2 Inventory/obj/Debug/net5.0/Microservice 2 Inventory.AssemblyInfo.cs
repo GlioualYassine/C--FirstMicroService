@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Microservice 2 Inventory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82868a2704d96944698bece66ce986fdd20d3075")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd3dd1bad4c259cbb17de250db375684b5e10d82")]
 [assembly: System.Reflection.AssemblyProductAttribute("Microservice 2 Inventory")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Microservice 2 Inventory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
