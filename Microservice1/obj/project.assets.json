@@ -1334,9 +1334,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice1\\Microservice1.csproj",
-      "projectName": "Microservice1",
-      "projectPath": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice1\\Microservice1.csproj",
+      "projectUniqueName": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice1\\Microservice1 items.csproj",
+      "projectName": "Microservice1 items",
+      "projectPath": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice1\\Microservice1 items.csproj",
       "packagesPath": "C:\\Users\\yassi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice1\\obj\\",
       "projectStyle": "PackageReference",

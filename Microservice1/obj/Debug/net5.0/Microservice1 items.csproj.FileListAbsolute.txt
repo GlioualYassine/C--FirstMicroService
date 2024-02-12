@@ -1,0 +1,56 @@
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\appsettings.json
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microservice1 items.exe
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microservice1 items.deps.json
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microservice1 items.runtimeconfig.json
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microservice1 items.runtimeconfig.dev.json
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microservice1 items.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microservice1 items.pdb
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\AWSSDK.Core.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\AWSSDK.SecurityToken.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Common.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\DnsClient.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microsoft.Extensions.Configuration.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\MongoDB.Bson.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\MongoDB.Driver.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\MyLibDummy.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\SharpCompress.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Snappier.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\ZstdSharp.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\yassi\source\repos\Microservice1\Microservice1\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.csproj.AssemblyReference.cache
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.AssemblyInfoInputs.cache
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.AssemblyInfo.cs
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.csproj.CoreCompileInputs.cache
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.sourcelink.json
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.RazorTargetAssemblyInfo.cache
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\scopedcss\bundle\Microservice1 items.styles.css
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\staticwebassets\Microservice1 items.StaticWebAssets.Manifest.cache
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\staticwebassets\Microservice1 items.StaticWebAssets.Pack.cache
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\staticwebassets\msbuild.Microservice1 items.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\staticwebassets\msbuild.build.Microservice1 items.props
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.Microservice1 items.props
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.Microservice1 items.props
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.csproj.CopyComplete
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\refint\Microservice1 items.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.pdb
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\Microservice1 items.genruntimeconfig.cache
+C:\Users\yassi\source\repos\Microservice1\Microservice1\obj\Debug\net5.0\ref\Microservice1 items.dll
