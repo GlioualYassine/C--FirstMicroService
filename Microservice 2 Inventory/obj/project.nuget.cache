@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jzRzR0qFSD1Pk8ZRzLfC4frZXQJU9n8qiYkE95WxUuzi4PbK2EkoXbBJ9zGHq7N9Qh6DN/YccRqEfoQLAveDqA==",
+  "dgSpecHash": "jo3bIBaaX/a8vGeDObBgKJP6uraDTNLqpIk91Wft16WbST4UZ3xkM3KLWaCnd0W6qt4HZCaAo8e7T25wdjVSpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice 2 Inventory\\Microservice 2 Inventory.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,7 @@
     "C:\\Users\\yassi\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\catalog.contracts\\1.0.0\\catalog.contracts.1.0.0.nupkg.sha512",
-    "C:\\Users\\yassi\\.nuget\\packages\\common\\1.0.1\\common.1.0.1.nupkg.sha512",
+    "C:\\Users\\yassi\\.nuget\\packages\\common\\1.0.2\\common.1.0.2.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\greenpipes\\4.0.0\\greenpipes.4.0.0.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\masstransit\\7.2.1\\masstransit.7.2.1.nupkg.sha512",

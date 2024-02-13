@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Common" Version="1.0.1" />
-    
+    <PackageReference Include="Common" Version="1.0.2" />
     <PackageReference Include="Package" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>

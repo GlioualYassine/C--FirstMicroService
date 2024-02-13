@@ -5,6 +5,7 @@ using Common.Settings;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using System.Reflection;
+using GreenPipes;
 
 
 namespace Common.MassTransit
@@ -25,6 +26,13 @@ namespace Common.MassTransit
                     var rabbitMQSettings = Configuration.GetSection(nameof(RabbitMQSettings)).Get<RabbitMQSettings>();
                     configurator.Host(rabbitMQSettings.Host);
                     configurator.ConfigureEndpoints(context, new KebabCaseEndpointNameFormatter(serviceSettings.ServiceName, false));
+                    
+                    //the above section is for Retrying reading message from Message broker if the previous read failed ! 
+                    configurator.UseMessageRetry(retryConfigurator => {
+                        retryConfigurator.Interval(3, TimeSpan.FromSeconds(5));// we repeat 3 times with 5 delai btw each repeat
+                    });
+
+                    //after this change you have to generat another nuget package "dotnet pack -p:PackageVersion=1.0.2 -o ..\package\"
                 });
             });
 

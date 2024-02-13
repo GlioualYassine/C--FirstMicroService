@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5J/bNttz1KiNE6QItommdALHeAGiBKSG78CsPVB+EHMUP3X2dx2WRJpAdXXqe7FqUcl3etM2MeOkby4WDeLaUw==",
+  "dgSpecHash": "Sh+U88Ng8oni/NJN/pZYVwsjkfq5GR0OiT9HgDaYaFSXSm2tl2Ly3y9r65P6S69GR2ogHoomZD0TvqnzXag1dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\yassi\\source\\repos\\Microservice1\\Microservice1\\Microservice1 Catalog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yassi\\.nuget\\packages\\automatonymous\\5.1.1\\automatonymous.5.1.1.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
-    "C:\\Users\\yassi\\.nuget\\packages\\common\\1.0.1\\common.1.0.1.nupkg.sha512",
+    "C:\\Users\\yassi\\.nuget\\packages\\common\\1.0.2\\common.1.0.2.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\greenpipes\\4.0.0\\greenpipes.4.0.0.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\masstransit\\7.2.1\\masstransit.7.2.1.nupkg.sha512",
@@ -126,7 +126,8 @@
     "C:\\Users\\yassi\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\system.xml.readerwriter\\4.3.1\\system.xml.readerwriter.4.3.1.nupkg.sha512",
     "C:\\Users\\yassi\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\yassi\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
+    "C:\\Users\\yassi\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512",
+    "C:\\Users\\yassi\\.nuget\\packages\\catalog.contracts\\1.0.0\\catalog.contracts.1.0.0.nupkg.sha512"
   ],
   "logs": [
     {

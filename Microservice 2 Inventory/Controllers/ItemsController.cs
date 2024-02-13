@@ -15,12 +15,13 @@ namespace Microservice_2_Inventory.Controllers
     [Route("items")]
     public class ItemsController : ControllerBase
     {
-        private readonly IRepository<InventoryItem> _ItemRepository;
-        private readonly CatalogClient catalogClient; 
-        public ItemsController(IRepository<InventoryItem> repository,CatalogClient catalog)
+        private readonly IRepository<InventoryItem> _inventoryItemRepository;
+        private readonly IRepository<CatalogItem> _catalogItemRepository;
+
+        public ItemsController(IRepository<InventoryItem> inventoryItemRepository, IRepository<CatalogItem> catalogItemRepository)
         {
-            this._ItemRepository = repository;
-            this.catalogClient = catalog;
+            _inventoryItemRepository = inventoryItemRepository;
+            _catalogItemRepository = catalogItemRepository;
         }
 
         [HttpGet]
@@ -28,12 +29,17 @@ namespace Microservice_2_Inventory.Controllers
         {
             if (userId == Guid.Empty)
                 return BadRequest();
-            var catalogitems = await catalogClient.GetCatalogItemsAsync();
-            var inventoryItemEntities = await _ItemRepository.GetAllAsync(item=>item.UserId == userId);
+            
+            var inventoryItemEntities = await _inventoryItemRepository.GetAllAsync(item=>item.UserId == userId);
+            var itemIds = inventoryItemEntities.Select(item => item.CatalogItemId);
+            var catalogitems = await _catalogItemRepository.GetAllAsync(item=>itemIds.Contains(item.Id));
             var inventoryItemDtos = inventoryItemEntities.Select(inventoryItem =>
             {
+                //join operation btw catalogItem Entity and InventoryItem Entity
                 var catalogItem = catalogitems.Single(catalogItem => catalogItem.Id == inventoryItem.CatalogItemId);
+                //here give me the item who has the same id as the inventoryItem in order to get informations about this item
                 return inventoryItem.AsDto(catalogItem.Name, catalogItem.Description);
+                //then return it as a DTO 
             });
 
             return Ok(inventoryItemDtos); 
@@ -42,7 +48,7 @@ namespace Microservice_2_Inventory.Controllers
         [HttpPost]
         public async Task<ActionResult> PostAsync(GrantItemDtos grantItemDtos)
         {
-            var InventoryItem = await _ItemRepository.GetAsync(
+            var InventoryItem = await _inventoryItemRepository.GetAsync(
                 item => item.UserId == grantItemDtos.userId && item.CatalogItemId == grantItemDtos.CatalogItemId);
             if(InventoryItem == null)
             {
@@ -53,12 +59,12 @@ namespace Microservice_2_Inventory.Controllers
                     Quantity = grantItemDtos.Quantity, 
                     AcquiredDate = DateTimeOffset.UtcNow
                 };
-                await _ItemRepository.CreateAsync(InventoryItem);
+                await _inventoryItemRepository.CreateAsync(InventoryItem);
             }
             else
             {
                 InventoryItem.Quantity += grantItemDtos.Quantity;
-                await _ItemRepository.UpdateAsync(InventoryItem);
+                await _inventoryItemRepository.UpdateAsync(InventoryItem);
             }
             return Ok();
         }

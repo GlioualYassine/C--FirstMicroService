@@ -34,7 +34,7 @@
       "Microservice1 Catalog/1.0.0": {
         "dependencies": {
           "Catalog.Contracts": "1.0.0",
-          "Common": "1.0.1",
+          "Common": "1.0.2",
           "Package": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -360,7 +360,7 @@
           "lib/netcoreapp3.1/AWSSDK.SecurityToken.dll": {}
         }
       },
-      "Common/1.0.1": {
+      "Common/1.0.2": {
         "dependencies": {
           "MassTransit": "7.2.1",
           "MassTransit.AspNetCore": "7.2.1",
@@ -3211,12 +3211,12 @@
       "path": "awssdk.securitytoken/3.7.100.14",
       "hashPath": "awssdk.securitytoken.3.7.100.14.nupkg.sha512"
     },
-    "Common/1.0.1": {
+    "Common/1.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PoubNOh5BUHlBGLcWVqZ3kd4yHPRVadwUSAVsU1XHOfYy6zI8ENtodKl5c6cclRwzIv++naiIaw38/FXyZ/Nvw==",
-      "path": "common/1.0.1",
-      "hashPath": "common.1.0.1.nupkg.sha512"
+      "sha512": "sha512-5xYcuI4Da5bgBaz3IR/gDX9xd6/M6QOWLM/Ft9Rf1U2CejBArVPPWxltwztirrOigpkxs4raUsikWjsI5rDxYA==",
+      "path": "common/1.0.2",
+      "hashPath": "common.1.0.2.nupkg.sha512"
     },
     "DnsClient/1.6.1": {
       "type": "package",
