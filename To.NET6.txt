@@ -1,0 +1,66 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
+using YourProjectName.Models; // Replace with your actual namespace
+
+// Add necessary namespaces using directives
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Configuration
+builder.Services.AddOptions<ServiceSettings>()
+    .Configure<IConfiguration>(settings =>
+    {
+        settings.Bind(builder.Configuration.GetSection(nameof(ServiceSettings)));
+    });
+
+// MongoDB (assuming a default MongoDB connection string in appsettings.json)
+builder.Services.AddMongo()
+    .AddMongoRepository<Item>("items", builder.Configuration.GetConnectionString("yourMongoDBConnectionString")); // Replace with your actual connection string name
+
+// MVC with Swagger API documentation (optional)
+builder.Services.AddControllers(options =>
+{
+    options.SuppressAsyncSuffixInActionNames = false;
+})
+.AddNewtonsoftJson() // Add this line for compatibility with older clients
+.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API Name", Version = "v1" });
+});
+
+// Logging (optional)
+builder.Services.AddLogging(configure =>
+{
+    configure.AddConsole();
+    // Add other logging providers as needed
+});
+
+var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name v1"));
+}
+
+app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+});
+
+app.Run();

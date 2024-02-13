@@ -9,5 +9,15 @@ services:
       - 27017:27017
     volumes:
       - mongodbdata:/data/db
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - 5672:5672 # to consom msg and publish msg to rabbitMQ
+      - 15672:15672 # to call rabbit MQ Portal
+    volumes:
+      - rabbitmqdata:/var/lib/rabbitmq
+    hostname: rabbitmq
 volumes:
   mongodbdata:
+  rabbitmqdata:

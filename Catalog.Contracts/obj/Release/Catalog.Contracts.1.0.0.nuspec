@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Catalog.Contracts</id>
+    <version>1.0.0</version>
+    <authors>Catalog.Contracts</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="e596481e8735c332c41a41fdf9566b56fa0e4ad1" />
+    <dependencies>
+      <group targetFramework="net5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\yassi\source\repos\Microservice1\Catalog.Contracts\bin\Release\net5.0\Catalog.Contracts.dll" target="lib\net5.0\Catalog.Contracts.dll" />
+  </files>
+</package>

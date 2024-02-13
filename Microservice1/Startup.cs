@@ -1,5 +1,8 @@
+using Common.MassTransit;
 using Common.Repositories;
 using Common.Settings;
+using MassTransit;
+using MassTransit.Definition;
 using Microservice1.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,8 +39,8 @@ namespace Microservice1
             
             serviceSettings = Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
             services.AddMongo()
-                .AddMongoRepository<Item>("items");
-
+                .AddMongoRepository<Item>("items")
+                .AddMassTransitWithRabbitMQ();
 
             services.AddControllers(options =>
             {

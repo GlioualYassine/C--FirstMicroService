@@ -1,4 +1,6 @@
-﻿using Common.Repositories;
+﻿using Catalog.Contracts;
+using Common.Repositories;
+using MassTransit;
 using Microservice1.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,16 +15,24 @@ namespace Microservice1.Controllers
     public class ItemsController : ControllerBase
     {
         private readonly IRepository<Item> _itemsRepository;
-        public ItemsController(IRepository<Item> itemsRepository)
+        private readonly IPublishEndpoint publishEndpoint;
+
+
+        public ItemsController(IRepository<Item> itemsRepository, IPublishEndpoint publishEndpoint)
         {
-            _itemsRepository = itemsRepository;
+            this._itemsRepository = itemsRepository;
+            this.publishEndpoint = publishEndpoint;
         }
+
         [HttpGet]
         public async Task<IEnumerable<ItemDto>> GetAsync()
         {
             var items = (await _itemsRepository.GetAllAsync()).Select(item=>item.AsDto());
             return items; 
         }
+
+
+
         [HttpGet("{id}")] // Get items/123 123->ID
         public async Task <ActionResult<ItemDto>> GetItemByIdAsync(Guid id)
         {
@@ -33,6 +43,9 @@ namespace Microservice1.Controllers
             }
             return NotFound(); 
         }
+
+
+
 
         [HttpPost]
         public async Task<ActionResult<ItemDto>> PostAsync(CreateItemDto createdItemDto)
@@ -45,8 +58,14 @@ namespace Microservice1.Controllers
                 CreatedDate = DateTimeOffset.UtcNow
             };
             await _itemsRepository.CreateAsync(item);
+
+            await publishEndpoint.Publish(new CatalogItemCreated(item.Id, item.Name, item.Description));
+
             return CreatedAtAction(nameof(GetItemByIdAsync), new { id = item.Id }, item);
         }
+
+
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAsync(Guid id, UpdateItemDto item)
@@ -59,11 +78,16 @@ namespace Microservice1.Controllers
             existingItem.Price = item.Price;
             existingItem.Description = item.Descripiton;
 
-            await _itemsRepository.UpdateAsync(existingItem);    
-  
+            await _itemsRepository.UpdateAsync(existingItem);
+            await publishEndpoint.Publish(new CatalogItemUpdated(existingItem.Id, existingItem.Name, existingItem.Description));
+
             return NoContent();
 
         }
+
+
+
+
 
         [HttpDelete("{id}")] 
         public async Task<IActionResult> DeleteAsync(Guid id)
@@ -72,6 +96,7 @@ namespace Microservice1.Controllers
             if (existingItem == null)
                 return NotFound();
             await _itemsRepository.DeleteAsync(id);
+            await publishEndpoint.Publish(new CatalogItemDeleted(existingItem.Id));
             return NoContent();
         }
 
