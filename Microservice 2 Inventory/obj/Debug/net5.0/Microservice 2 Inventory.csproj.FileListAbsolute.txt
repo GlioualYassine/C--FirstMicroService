@@ -61,3 +61,15 @@ C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net
 C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\Polly.dll
 C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\Polly.Extensions.Http.dll
 C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\Automatonymous.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\Catalog.Contracts.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\GreenPipes.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\MassTransit.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\MassTransit.AspNetCoreIntegration.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\MassTransit.ExtensionsDependencyInjectionIntegration.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\MassTransit.RabbitMqTransport.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\NewId.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\yassi\source\repos\Microservice1\Microservice 2 Inventory\bin\Debug\net5.0\RabbitMQ.Client.dll

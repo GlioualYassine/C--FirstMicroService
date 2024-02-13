@@ -1,3 +1,4 @@
+using Common.MassTransit;
 using Common.Repositories;
 using Microservice_2_Inventory.Clients;
 using Microservice_2_Inventory.Entities;
@@ -31,20 +32,12 @@ namespace Microservice_2_Inventory
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        { 
+        {
             services.AddMongo()
-                .AddMongoRepository<InventoryItem>("inventoryitems");
-            Random iterer = new Random();
-            services.AddHttpClient<CatalogClient>(client =>
-            {
-                client.BaseAddress = new Uri("https://localhost:5001");    
-            })
-             .AddTransientHttpErrorPolicy(builder => builder.Or<TimeoutRejectedException>().WaitAndRetryAsync(5, retryAttempt =>
-                 TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)) + TimeSpan.FromMilliseconds(iterer.Next(0,1000))
-             ))
-             .AddTransientHttpErrorPolicy(builder => builder.Or<TimeoutRejectedException>().CircuitBreakerAsync(
-                 3,TimeSpan.FromSeconds(15)
-             )).AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(1))  ;
+                .AddMongoRepository<InventoryItem>("inventoryitems")
+                .AddMongoRepository<CatalogItem>("catalogitems")
+                .AddMassTransitWithRabbitMQ();
+            AddCatalogClient(services);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -52,6 +45,7 @@ namespace Microservice_2_Inventory
             });
         }
 
+      
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -73,5 +67,20 @@ namespace Microservice_2_Inventory
                 endpoints.MapControllers();
             });
         }
+        private static void AddCatalogClient(IServiceCollection services)
+        {
+            Random iterer = new Random();
+            services.AddHttpClient<CatalogClient>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:5001");
+            })
+             .AddTransientHttpErrorPolicy(builder => builder.Or<TimeoutRejectedException>().WaitAndRetryAsync(5, retryAttempt =>
+                 TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)) + TimeSpan.FromMilliseconds(iterer.Next(0, 1000))
+             ))
+             .AddTransientHttpErrorPolicy(builder => builder.Or<TimeoutRejectedException>().CircuitBreakerAsync(
+                 3, TimeSpan.FromSeconds(15)
+             )).AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(1));
+        }
+
     }
 }

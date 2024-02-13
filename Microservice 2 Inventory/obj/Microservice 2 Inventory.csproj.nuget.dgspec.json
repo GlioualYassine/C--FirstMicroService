@@ -41,9 +41,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Common": {
+            "Catalog.Contracts": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "Common": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             },
             "Microsoft.Extensions.Http.Polly": {
               "target": "Package",
