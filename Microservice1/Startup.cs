@@ -26,6 +26,7 @@ namespace Microservice1
     public class Startup
     {
         ServiceSettings serviceSettings;
+        private const string AllowedOriginSetting = "AllowedOrigin";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -60,6 +61,17 @@ namespace Microservice1
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Microservice1 v1"));
+               
+                //adding cors to our microservice 1 
+                app.UseCors(builder =>
+                {
+                    builder.WithOrigins(Configuration[AllowedOriginSetting])
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            
+            
+            
             }
 
             app.UseHttpsRedirection();

@@ -23,6 +23,8 @@ namespace Microservice_2_Inventory
 {
     public class Startup
     {
+        private const string AllowedOriginSetting = "AllowedOrigin";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -54,6 +56,15 @@ namespace Microservice_2_Inventory
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Microservice_2_Inventory v1"));
+                //adding cors to our microservice 2 
+                app.UseCors(builder =>
+                {
+                    builder.WithOrigins(Configuration[AllowedOriginSetting])
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+
+
             }
 
             app.UseHttpsRedirection();
